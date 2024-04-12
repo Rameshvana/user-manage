@@ -1,0 +1,66 @@
+.bomma{
+    font-size:30px; 
+    color:white;
+    border-radius: 3px;
+    border: solid;
+    border-color: #46b8da;
+    background-color: #5bc0de;
+ 
+ 
+ }
+ 
+ .bomma1{
+    font-size:30px;
+    color:white;
+    border:solid;
+    border-radius: 3px;
+    background-color: #d9534f;
+    border-color: #d43f3a; 
+    margin:0px 10px 0px 10px;
+ }
+ 
+ .bomma2{
+     color: #fff;
+     background-color: #f0ad4e;
+     border-color: #eea236;
+     border:solid;
+     border-radius: 3px;
+     font-size: 38px;
+ }
+.table-card {
+    border: solid 1px brown;
+    width:80vw;
+    margin:10px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.table-email {
+  color: #46b8da;  
+}
+
+.mo {
+ color: #5bc0de;  
+}
+
+.serch-input{
+ outline: none;
+ padding: 9px;
+ widtH:23vw;
+ border-radius: 5px;
+ margin:0px 0px 10px 15px;
+ font-size: 17px;
+ border-width: 0px;
+ border: solid 1px rgb(129, 45, 45);
+}
+
+.serch-btn {
+ padding: 10px;
+ color:rgb(10, 9, 9);
+ border-radius: 6px;
+ width:7vw;
+ margin-left: 7px;
+ border-width: 0px;
+ font-weight: 500;
+ font-size: 18px;
+ margin-top: 4px;
+}
