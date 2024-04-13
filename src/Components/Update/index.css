@@ -1,0 +1,27 @@
+.up {
+   border: solid 1px bisque; 
+   padding: 25px;
+   width: 55vw;
+   border-radius: 10px;
+   margin:40px 0px 10px 80px;
+}
+
+input {
+   padding: 25px;
+   height: 8vh; 
+   margin-top:30px;
+}
+
+select {
+    padding: 25px;
+    height: 7vh; 
+    margin-top:25px;
+ }
+
+ .bu {
+   width: 12vw;
+   color:whitesmoke ;
+   font-weight: 600;
+   font-size: 18px;
+   margin-top: 20px;
+ }
