@@ -1,11 +1,12 @@
 import { useParams } from 'react-router-dom';
 import './index.css'
 import { useEffect, useRef,useState } from 'react';
-import { getData } from '../../service';
+import { getData, updateData } from '../../service';
 
 function UserupdateCom() {
     const { id } = useParams()
     let Url = `http://localhost:8000/users/${id}`
+    let updateUrl = `http://localhost:8000/update-user/${id}`
     console.log(id)
     const [values,setvalues] = useState([])
 
@@ -41,10 +42,19 @@ function UserupdateCom() {
             email: emailRef.current.value,
             phoneNo: phoneNoRef.current.value,
             status: statusRef.current.value,
-            registation_date : registationRef.current.value,
-            user_image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTY2MTU3Ny13aWtpbWVkaWEtaW1hZ2Uta293YXBlZWouanBn.jpg"}
-           console.log(data) 
-    }       
+            registation_date : values.registation_date,
+            user_image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTY2MTU3Ny13aWtpbWVkaWEtaW1hZ2Uta293YXBlZWouanBn.jpg"
+        }
+        console.log(data) 
+
+        updateData(updateUrl,data)
+        .then((res) => {
+          alert('Update user data successfully..')  
+        })
+        .catch(() => {
+          alert('Update user data failed..')  
+        })
+        }       
 
     return (
         <div>

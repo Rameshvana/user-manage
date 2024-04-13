@@ -1,23 +1,24 @@
 .bomma{
-    font-size:30px; 
+    font-size:27px; 
     color:white;
     border-radius: 3px;
     border: solid;
     border-color: #46b8da;
     background-color: #5bc0de;
- 
+
  
  }
  
  .bomma1{
-    font-size:30px;
+    font-size:27px;
     color:white;
     border:solid;
     border-radius: 3px;
     background-color: #d9534f;
     border-color: #d43f3a; 
-    margin:0px 10px 0px 10px;
+    margin:0px 5px 0px 10px;
  }
+
  
  .bomma2{
      color: #fff;
@@ -25,7 +26,7 @@
      border-color: #eea236;
      border:solid;
      border-radius: 3px;
-     font-size: 38px;
+     font-size: 33px;
  }
 .table-card {
     border: solid 1px brown;
@@ -47,12 +48,13 @@
 .serch-input{
  outline: none;
  padding: 9px;
- widtH:23vw;
+ widtH:24vw;
  border-radius: 5px;
  margin:0px 0px 10px 15px;
  font-size: 17px;
  border-width: 0px;
  border: solid 1px rgb(129, 45, 45);
+ height: 48px;
 }
 
 .serch-btn {
@@ -65,4 +67,9 @@
  font-weight: 500;
  font-size: 18px;
  margin-top: 4px;
+}
+
+li {
+ list-style-type: none; 
+ cursor: pointer;  
 }

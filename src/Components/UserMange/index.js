@@ -2,14 +2,14 @@ import { useState } from 'react'
 import { MdMode,MdPictureAsPdf,MdDelete } from "react-icons/md";
 import './index.css'
 import { useEffect } from 'react'
-import { getData } from '../../service'
-import SharedComponent from '../Shared/shared.component'
+import { deleteData, getData } from '../../service'
+//import SharedComponent from '../Shared/shared.component'
 import { Link } from 'react-router-dom';
 
 //   const {name,email,registation_date,phoneNo,status,user_image} = con
 
 let url = 'http://localhost:8000/users'
-const headers = ['sNo', ' Name','Email','PhoneNo', 'Status','Registation','Actions', ]
+const headers = ['sNo', ' Name','Email','Phone No', 'Status','Registation','Actions', ]
 
 
 function UserManageComponent(){
@@ -17,7 +17,21 @@ function UserManageComponent(){
    const [query,setquery] = useState(null)
    const [filterData,setfilterData] = useState([])
 
-   useEffect(() => {
+   function deleteUser(id){
+    let delUrl = `http://localhost:8000/delete-user/${id}`
+    console.log(id)
+
+    deleteData(delUrl)
+    .then(() => {
+      alert('Delete user data successfully..')
+      callTheData()
+    })
+    .catch(() => {
+      alert('Delete user data failed..')
+    })
+   }
+
+   function callTheData() {
       getData(url)
       .then((res) => {
          //alert('get the data Successfully..')
@@ -28,15 +42,11 @@ function UserManageComponent(){
       .catch(() => {
          alert('get data failed..')
       })
-   },[])
-
-   function UserSearch(event){
-      console.log(event.target.value)
-      alert('Onchange')
-
    }
-   
 
+   useEffect(callTheData)
+
+  
    function handleChange(e) {
       let user_search_value = (e.target.value);
       
@@ -76,9 +86,9 @@ function UserManageComponent(){
                         {/* <button className='btn btn-success'>Edit</button> &nbsp;
                         <button className='btn btn-danger'>Delete</button> 
                         <a href='#' onClick={() => {}} ><MdMode className='bomma'/> </a> */}
-                        <Link to={`/update-user/${each._id}`}><MdMode className='bomma'/></Link>
-                        <a href='#' onClick={() => {}} ><MdDelete className='bomma1'/> </a>
-                        <a href='#' onClick={() => {}} ><MdPictureAsPdf className='bomma2'/></a>
+                        <Link to={`/update-user/${each._id}`} title='Update'><MdMode className='bomma'/></Link>
+                        <Link href='#' onClick={() => {deleteUser(each._id)}} title='Delete'><MdDelete className='bomma1'/> </Link>
+                        <Link title='Info' onClick={() => {}} ><MdPictureAsPdf className='bomma2'/></Link>
                      </td>
                   </tr>
                ))}
