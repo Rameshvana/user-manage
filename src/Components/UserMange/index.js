@@ -35,7 +35,7 @@ function UserManageComponent(){
       getData(url)
       .then((res) => {
          //alert('get the data Successfully..')
-         console.log(res.data)
+         //console.log(res.data)
          setusersData(res.data)
          setfilterData(res.data)  
       })
@@ -44,15 +44,16 @@ function UserManageComponent(){
       })
    }
 
-   useEffect(callTheData)
+   useEffect(callTheData,[])
 
   
    function handleChange(e) {
       let user_search_value = (e.target.value);
       
       if (user_search_value.length > 0){
-         const searchdata = usersData.filter((item) => item.name.toLowerCase().includes(user_search_value));
+         const searchdata = filterData.filter((item) => item.name.toLowerCase().includes(user_search_value));
          setusersData(searchdata)
+         console.log(searchdata.length)
       } else {
          setusersData(filterData)
       }
@@ -64,7 +65,7 @@ function UserManageComponent(){
    <div className='mt-5'>
 
       <div className='input-card'>
-        <input type='search' placeholder='Search for User..' value={query} className='serch-input' onChange={handleChange} />
+        <input type='text' placeholder='Search for User..' value={query} className='serch-input' onChange={handleChange} />
         <button type='button' className='serch-btn'>Search</button>
       </div> 
 

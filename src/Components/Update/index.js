@@ -75,7 +75,7 @@ function UserupdateCom() {
                             <input type='date' class="form-control" placeholder="User Restation date" ref={registationRef}/>
                         </div>
                         <div class="col">
-                            <input type='password' class="form-control" placeholder="User PhoneNo" ref={phoneNoRef}/>
+                            <input type='text' class="form-control" placeholder="User PhoneNo" ref={phoneNoRef}/>
                         </div>
                     </div>
                     <div class="form-group col">
