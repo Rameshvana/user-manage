@@ -12,3 +12,7 @@ export function updateData(updateUrl,data){
 export function deleteData(delUrl){
   return axios.delete(delUrl)
 }
+
+export function saveData(url,data){
+  return axios.post(url,data)
+}

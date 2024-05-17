@@ -1,49 +1,48 @@
-.bomma{
-    font-size:27px; 
+.update-icon{
+    font-size:25px; 
     color:white;
     border-radius: 3px;
     border: solid;
     border-color: #46b8da;
     background-color: #5bc0de;
-
- 
  }
  
- .bomma1{
-    font-size:27px;
+ .delete-icon{
+    font-size:25px;
     color:white;
     border:solid;
     border-radius: 3px;
     background-color: #d9534f;
     border-color: #d43f3a; 
-    margin:0px 5px 0px 10px;
+    margin-left: 5px;
  }
 
- 
- .bomma2{
-     color: #fff;
-     background-color: #f0ad4e;
-     border-color: #eea236;
-     border:solid;
-     border-radius: 3px;
-     font-size: 33px;
- }
+
 .table-card {
-    border: solid 1px brown;
-    width:80vw;
-    margin:10px;
-    padding: 20px;
-    border-radius: 10px;
-    height: 80vh;
-    overflow-y: scroll;
-}
-.table-email {
-  color: #46b8da;  
+    border: 0 solid #e5e7eb;
+    margin:7px 10px 30px 50px;
+    background-color: #fff;
+    width:90vw;
+    border-radius: 7px;
+    padding:25px 0px 10px 20px;
+    overflow-x: auto;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-.mo {
- color: #5bc0de;  
+.adduser-btn {
+    padding: 10px 20px;
+    color:#ffffff;
+    background-color: #029Bcf;
+    border-width: 0px;
+    border-radius: 5px;
+    display: block;
 }
+
+.mk {
+  display: flex;  
+}
+
+
 
 .serch-input{
  outline: none;
@@ -55,21 +54,107 @@
  border-width: 0px;
  border: solid 1px rgb(129, 45, 45);
  height: 48px;
+
+ 
+}
+
+.table-user {
+ display: flex;
+ align-items: center;   
 }
 
 .serch-btn {
  padding: 10px;
  color:rgb(10, 9, 9);
  border-radius: 6px;
- width:7vw;
+ width:100px;
  margin-left: 7px;
  border-width: 0px;
  font-weight: 500;
- font-size: 18px;
- margin-top: 4px;
+ margin-bottom: 9px;
+ background-color: rgb(239, 240, 240);
 }
 
-li {
- list-style-type: none; 
- cursor: pointer;  
+   
+.bg-cardc {
+ background-color:   #e5e7eb;
+ min-height: 100vh;
+}
+
+.Activestatus {
+    color:#34af86;
+    border: solid 1px #34af80;
+    border-radius: 15px;
+    padding: 5px 8px 5px 8px;
+    margin-top: 20px;
+    font-size: 13px;
+}
+.deactivestatus {
+ color: #FF5733; 
+ font-size: 13px;
+ border: solid 1px #FF5730;
+ border-radius: 15px;
+ padding: 5px 8px 5px 8px;
+ margin-top: 10px;
+   
+}
+
+
+
+.inputEl {
+    outline: none;
+    border:none;
+    background-color: transparent;
+    width:20vw;
+}
+.input-section {
+  display: flex;
+  align-items: center; 
+  padding: 9px;
+ widtH:24vw;
+ border-radius: 5px;
+ margin:0px 0px 10px 15px;
+ font-size: 17px;
+ border-width: 0px;
+ border: solid 0px #5bc0de;
+ height: 48px; 
+ background-color: #fff;
+}
+.input-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+  margin-left: 35px;
+  margin-top: 15px;   
+}
+.serch-icon {
+   font-size: 20px;
+   margin:2px 5px 0px 0px; 
+}
+
+
+table.table .avatar {
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
+strong{
+    color: transparent;
+}
+.filter {
+    width:25vw;
+    background-color: transparent;
+    color: #fff;
+}
+
+table {
+  width: 90vw;
+  overflow-x: auto;  
+}
+
+.pagination-card {
+  display: flex;
+  justify-content: space-around;
 }

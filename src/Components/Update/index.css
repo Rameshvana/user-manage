@@ -1,27 +1,50 @@
-.up {
-   border: solid 1px bisque; 
+
+.user-update-card {
+   border: solid 0px bisque; 
    padding: 25px;
-   width: 55vw;
    border-radius: 10px;
-   margin:40px 0px 10px 80px;
+   background-color:   #fff;
+
+
+}
+.head {
+   font-family: Poppins,sans-serif;
+   color: coral;
+   font-style:inherit;
+   text-align: center;
+
 }
 
-input {
-   padding: 25px;
-   height: 8vh; 
+.card {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color:   #e5e7eb;
+   margin-bottom: 10px;
+   min-height: 100vh;
+   max-height: 150vh;
+}   
+
+.update-input {
+   padding: 10px;
    margin-top:30px;
+   border-radius: 4px;
+   width: 25vw;
 }
 
-select {
-    padding: 25px;
-    height: 7vh; 
+.dropdown-user-status {
+    padding: 10px;
+    width: 52vw; 
     margin-top:25px;
+    border-radius: 4px;
+
  }
 
  .bu {
-   width: 12vw;
    color:whitesmoke ;
    font-weight: 600;
-   font-size: 18px;
    margin-top: 20px;
+   text-align: center;
  }
+
+ 

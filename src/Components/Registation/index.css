@@ -1,0 +1,46 @@
+.user-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.registati {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.regi-img {
+    height: 101vh;
+}
+
+.meterial-input{
+    width: 25vw;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+.name-input {
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    width: auto;
+}
+.m {
+    display: flex;
+    align-items: center;
+    border: solid black 1px;
+    padding: 12px;
+    border-radius: 9px;
+    margin-bottom: 27px;
+   }
+
+.re-btn {
+  width: 30vw;
+  padding: 10px;
+  border-radius: 8px;  
+}
+.form-hed {
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: system-ui;
+    display: none;
+}
+

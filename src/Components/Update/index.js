@@ -2,6 +2,10 @@ import { useParams } from 'react-router-dom';
 import './index.css'
 import { useEffect, useRef,useState } from 'react';
 import { getData, updateData } from '../../service';
+import React from 'react';
+import Popup from 'reactjs-popup';
+import{ Switch }from"antd";
+import 'reactjs-popup/dist/index.css';
 
 function UserupdateCom() {
     const { id } = useParams()
@@ -15,6 +19,7 @@ function UserupdateCom() {
     const phoneNoRef = useRef()
     const registationRef = useRef()
     const statusRef = useRef()
+    const imageRef = useRef()
 
     useEffect(() => {
         getData(Url)
@@ -28,6 +33,7 @@ function UserupdateCom() {
            phoneNoRef.current.value = data.phoneNo
            registationRef.current.value = data.registation_date
            statusRef.current.value = data.status
+           imageRef.current.value = data.user_image
           
         })
         .catch(() => {
@@ -43,7 +49,7 @@ function UserupdateCom() {
             phoneNo: phoneNoRef.current.value,
             status: statusRef.current.value,
             registation_date : values.registation_date,
-            user_image: "https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L3Vwd2s2MTY2MTU3Ny13aWtpbWVkaWEtaW1hZ2Uta293YXBlZWouanBn.jpg"
+            user_image: values.user_image,
         }
         console.log(data) 
 
@@ -57,29 +63,29 @@ function UserupdateCom() {
         }       
 
     return (
-        <div>
+        <div className='card'>
             
-            <div className='up'>
-            <h4>Update User Details here</h4>
+            <div className='user-update-card'>
+            <h4 className='head'>Update User Details Here</h4>
                 <form onSubmit={Updatedata}>
                     <div class="row">
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="User name" ref={nameRef}/>
+                        <div class="col-6 ">
+                            <input type="text" class="form-control" placeholder="User name" ref={nameRef} className='update-input'/>
                         </div>
-                        <div class="col">
-                            <input type='email' class="form-control" placeholder="User email" ref={emailRef}/>
+                        <div class="col-6 ">
+                            <input type='email' class="form-control" placeholder="User email" ref={emailRef} className='update-input'/>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col">
-                            <input type='date' class="form-control" placeholder="User Restation date" ref={registationRef}/>
+                        <div class="col-6 ">
+                            <input type='date' class="form-control" placeholder="User Restation date" ref={registationRef} className='update-input'/>
                         </div>
-                        <div class="col">
-                            <input type='text' class="form-control" placeholder="User PhoneNo" ref={phoneNoRef}/>
+                        <div class="col-6">
+                            <input type='text' class="form-control" placeholder="User PhoneNo" ref={phoneNoRef} className='update-input'/>
                         </div>
                     </div>
-                    <div class="form-group col">
-                      <select id="inputState" class="form-control" ref={statusRef}>
+                    <div class="form-group col-12">
+                      <select id="inputState" class="form-control" ref={statusRef} className='dropdown-user-status'>
                        <option selected>Choose user Status</option>
                        <option>Active</option>
                        <option>Inactive</option>
@@ -88,6 +94,7 @@ function UserupdateCom() {
                     <button type='submit' class="btn btn-primary bu">Update</button>
                 </form>
             </div>
+   
         </div>
     )
 }
